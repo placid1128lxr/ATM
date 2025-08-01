@@ -16,7 +16,6 @@ R_0 = 6378137;
 e = 0.0818191908425;
 tau = 0.02;
 
-% 参与定位的系统个数
 prn_gps = find((prn >= MOPS_MIN_GPSPRN & prn <= MOPS_MAX_GPSPRN));
 prn_gal = find((prn >= MOPS_MIN_GALPRN & prn <= MOPS_MAX_GALPRN));
 prn_glo = find((prn >= MOPS_MIN_GLOPRN & prn <= MOPS_MAX_GLOPRN));
