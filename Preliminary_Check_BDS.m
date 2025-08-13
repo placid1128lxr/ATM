@@ -58,7 +58,7 @@ if ~isempty(obs_GPS)
         [el_GPS,~] = enu2altaz(Es_GPS,Ns_GPS,Us_GPS);
         
         %cut-off low sv 
-        obs_GPS = obs_GPS(el_GPS>deg2rad(mask_angle),:);  % 删除低掩角
+        obs_GPS = obs_GPS(el_GPS>deg2rad(mask_angle),:);
         eph_GPS = eph_GPS(:,ismember(eph_GPS(1,:),obs_GPS(:,3)));
         
         nr_sv_GPS2=size(obs_GPS,1);
@@ -85,5 +85,6 @@ end
 %output
 nr_sv_excl=nr_sv_GPS0-nr_sv_GPS2; 
         
+
 
 
