@@ -115,7 +115,7 @@ else
 end
 
 if norm(historical_residual_aligned) < eps
-    residual_change_rate = 0;
+    residual_change_rate = 1e-9;
 else
     residual_change_rate = norm(delta_z_aligned - historical_residual_aligned) / norm(historical_residual_aligned);
 end
@@ -162,3 +162,4 @@ est_IMU_bias_new = est_IMU_bias_old + x_est_new(10:15);
 est_clock_new = x_est_new(16:19)';
 
 % Ends
+
